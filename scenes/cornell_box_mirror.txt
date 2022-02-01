@@ -1,0 +1,106 @@
+
+PerspectiveCamera {
+    center 0 0 2.2
+    direction 0 0 -1
+    up 0 1 0
+    angle 30
+}
+
+Background {
+    color 0 0 0
+}
+
+Materials {
+    numMaterials 5
+
+    Diffuse {
+        color 1 1 1
+    }
+
+    Reflective {
+        color 0.8 0.8 0.8
+    }
+
+    Diffuse {
+        color 1 0 0
+    }
+
+    Diffuse {
+        color 0 1 0
+    }
+
+    Diffuse {
+        color 1 1 1
+        glow 8 8 8
+    }
+}
+
+Group {
+    numObjects 8
+
+    MaterialIndex 0
+    XZRectangle {
+       lower -0.5 -0.5
+       upper 0.5 0.5
+       k -0.5
+       normal 1
+    }
+
+    XYRectangle {
+       lower -0.5 -0.5
+       upper 0.5 0.5
+       k -0.5
+       normal 1
+    }
+
+    XZRectangle {
+       lower -0.5 -0.5
+       upper 0.5 0.5
+       k 0.5
+       normal -1
+    }
+
+    Transform {
+      Translate 0.2 -0.375 0.25
+      YRotate 73
+      Cube {
+          center 0 0 0
+          size 0.25
+      }
+    }
+
+    MaterialIndex 1
+    Transform {
+      Translate -0.2 -0.1875 -0.25
+      Scale 1 2.5 1
+      YRotate 13
+      Cube {
+          center 0 0 0
+          size 0.25
+      }
+    }
+
+    MaterialIndex 2
+    YZRectangle {
+       lower -0.5 -0.5
+       upper 0.5 0.5
+       k -0.5
+       normal 1
+    }
+
+    MaterialIndex 3
+    YZRectangle {
+       lower -0.5 -0.5
+       upper 0.5 0.5
+       k 0.5
+       normal -1
+    }
+
+    MaterialIndex 4
+    XZRectangle {
+       lower -0.125 -0.125
+       upper 0.125 0.125
+       k 0.499
+       normal -1
+    }
+}

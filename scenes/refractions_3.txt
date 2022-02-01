@@ -1,0 +1,176 @@
+PerspectiveCamera {
+    center 2 1.5 5
+    direction -0.3 -0.1 -1
+    up 0 1 0
+    angle 45
+}
+
+Background {
+    color 1 1 1
+}
+
+Materials {
+    numMaterials 13
+
+    Glass {
+	color 0.92 0.92 0.92
+	indexOfRefraction 1.95
+    }
+
+    Diffuse {
+        color 1 0 0
+    }
+
+    Diffuse {
+        color 0.1 0.1 0.9
+    }
+
+    Diffuse {
+        color 0.1 0.85 0.0
+    }
+
+    Diffuse {
+        color 0.9 0.5 0.0
+    }
+
+    Diffuse {
+        color 1.0 0.25 0.0
+    }
+
+    Diffuse {
+        color 0.6 0.49 0.3
+    }
+
+    Diffuse {
+        color 0.79 0.66 0.44
+    }
+
+    Wood {
+        Transform {
+	    XRotate 90
+            UniformScale 4
+        }
+        materialIndex 6
+        materialIndex 7
+	octaves 3
+	frequency 6
+	amplitude 2
+    }
+
+    Diffuse {
+        color 0.4 0.33 0.22
+    }
+
+    Diffuse {
+        color 0.69 0.56 0.34
+    }
+
+    Wood {
+        Transform {
+	    ZRotate 90
+            UniformScale 4
+        }
+        materialIndex 9
+        materialIndex 10
+	octaves 3
+	frequency 6
+	amplitude 2
+    }
+
+    Checkerboard {
+        Transform {
+	    UniformScale 0.5
+	}
+	materialIndex 8
+	materialIndex 11
+    }
+}
+
+Group {
+    numObjects 13
+
+    MaterialIndex 12
+    Plane {
+	normal 0 1 0
+        offset 0
+    }
+
+    MaterialIndex 0
+    Sphere {
+	center 0.3 1.0 -1
+        radius 1
+    }
+
+    MaterialIndex 1
+    Transform {
+        Translate -3.5 0.4 -14.1
+	YRotate 15 
+        Cube {
+           center 0 0 0
+           size 0.8
+        }
+    }
+
+    Sphere {
+	center -14.7 0.7 -16.8
+        radius 0.7
+    }
+
+    MaterialIndex 2
+    Transform {
+        Translate -1.4 0.2 0.8
+	YRotate 32 
+        Cube {
+           center 0 0 0
+           size 0.4
+        }
+    }
+
+    Cone {
+	tip -11.8 1.2 -17
+        axis 0 -1 0
+        angle 30
+        height 1.2
+    }
+
+    Sphere {
+	center 0.6 0.38 1.1
+        radius 0.38
+    }
+
+    Transform {
+        Translate 2.7 0 -16.8
+        UniformScale 0.45
+        TriangleMesh {
+            file teapot.obj
+        }
+    }
+
+    MaterialIndex 3
+    Sphere {
+	center -3.3 0.24 -4.9
+        radius 0.24
+    }
+
+    Sphere {
+	center 2.5 0.3 0.4
+        radius 0.3
+    }
+
+    MaterialIndex 4
+    Sphere {
+	center -2.2 0.18 -3.1
+        radius 0.18
+    }
+
+    Sphere {
+	center 2.2 0.5 -3.0
+        radius 0.5
+    }
+
+    MaterialIndex 5
+    Sphere {
+	center 0.5 0.2 -3.1
+        radius 0.2
+    }
+}
